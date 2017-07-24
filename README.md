@@ -1,5 +1,5 @@
-clientside
-==========
+webctf
+======
 
 Easy example CTF server that demonstrates clientside web exploitation. It also demonstrates Information Disclosure in the later levels.
 
