@@ -41,6 +41,10 @@ The developer is very new to web development, especially with security. They cop
 
 The developer is embarrassed at their mistake and wants to prove they can write their own code. They're learning JavaScript and are really enthusiastic about it, enough to write a login feature in JavaScript. The dev has also learned a small amount about hash functions, too...
 
+-	What is a cookie?
+
+The developer is using a cookie to prevent access to all of the levels. If you need to jump forward to skip to questions, feel free to edit the cookies to access them. This is a gimme, just try it out to access the next level.
+
 -	What is encoding?
 
 The developer is annoyed at you now, and has made their code "unreadable" for you to exploit! It's the same code, but now it's next to impossible to understand...
