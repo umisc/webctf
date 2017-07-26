@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /level7_secret_9005619802
+Sitemap: /sitemap.xml

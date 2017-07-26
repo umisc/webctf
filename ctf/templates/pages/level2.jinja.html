@@ -1,0 +1,64 @@
+{% extends 'base/base.jinja.html' %}
+{% block content %}
+
+<div class="col col-xs-2"></div>
+<div class="col col-xs-8">
+  <div class="text-center">
+    <h1>Level 2</h1>
+    <h2>What is clientside validation?</h2>
+  </div>
+
+  <p>
+    The developer is embarrassed at their mistake and wants to prove they can write their own code. They're learning JavaScript and are really enthusiastic about it, enough to write a login feature in JavaScript. The dev has also learned a small amount about hash functions to make their password verification script "better."
+  </p>
+
+  <div class="col col-xs-3"></div>
+  <div class="col col-xs-6">
+      <div class="form-item" style="margin: 1em">
+        <input id="pass" name="pass"
+               required="true" type="password"
+               placeholder="Password?" class="form-control"/>
+      </div>
+
+      <div class="form-item"  style="margin: 1em">
+        <button class="button round outline big form-control text-center"
+                onclick="validate()">
+          Login
+        </button>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
+{% block extrascripts %}
+
+<script>
+
+/* Try to solve this without editing anything */
+
+function validate() {
+  var field = $("#pass").val();
+  if (hash(field) == "2drowssap") {
+    alert("Password correct!");
+    Cookies.set('level2', "true");
+
+    window.location.href = "/level3/";
+  } else {
+    alert("Password incorrect.");
+  }
+}
+
+function hash(str) {
+  let l=str.length, s='';
+
+  while(l > 0) {
+    l--;
+    s+= str[l];
+  }
+
+  return s;
+}
+
+</script>
+
+{% endblock %}

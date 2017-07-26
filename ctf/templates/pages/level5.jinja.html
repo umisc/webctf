@@ -1,0 +1,62 @@
+{% extends 'base/base.jinja.html' %}
+{% block content %}
+
+<div class="col col-xs-2"></div>
+<div class="col col-xs-8">
+  <div class="text-center">
+    <h1>Level 5</h1>
+    <h2>What is editing the DOM?</h2>
+  </div>
+
+  <p>
+    The developer realises that encoding isn't enough, so they decided to write a more complicated client-side login form too. The form finally stores a hashed password on the server; it won't be possible to "reverse engineer" the stored hash from the source
+    code any longer.
+  </p>
+
+  <div class="col col-xs-3"></div>
+  <div class="col col-xs-6">
+    <div class="form-item" style="margin: 1em">
+      <input id="pass" name="pass" required="true" type="password" placeholder="Password?" class="form-control" />
+    </div>
+
+    <div class="form-item" style="margin: 1em">
+      <button class="button round outline big form-control text-center" onclick="validate()">
+          Login
+        </button>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
+{% block extrascripts %}
+
+<script>
+  function validate() {
+    var field = $("#pass").val();
+
+    $.ajax({
+      url: "/level5",
+      type: "POST",
+      data: {
+        "attempt": field
+      },
+      async: false,
+      success: function(r) {
+        if (r == "true") {
+          alert("Password correct!");
+          goContinue();
+        } else {
+          alert("Password incorrect.");
+        }
+      }
+    });
+  }
+
+  function goContinue() {
+    // Try not to edit this function.
+    Cookies.set('level5', "true");
+    window.location.href = "/level6/";
+  }
+</script>
+
+{% endblock %}

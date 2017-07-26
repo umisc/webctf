@@ -1,0 +1,66 @@
+{% extends 'base/base.jinja.html' %}
+{% block content %}
+
+<div class="col col-xs-2"></div>
+<div class="col col-xs-8">
+  <div class="text-center">
+    <h1>Level 4</h1>
+    <h2>What is encoding?</h2>
+  </div>
+
+  <p>
+    The developer is annoyed at you now, and has made their code "unreadable" for you to exploit! It's the same code, but now it's next to impossible to understand...
+  </p>
+
+  <div class="col col-xs-3"></div>
+  <div class="col col-xs-6">
+      <div class="form-item" style="margin: 1em">
+        <input id="pass" name="pass"
+               required="true" type="password"
+               placeholder="Password?" class="form-control"/>
+      </div>
+
+      <div class="form-item"  style="margin: 1em">
+        <button class="button round outline big form-control text-center"
+                onclick="validate()">
+          Login
+        </button>
+      </div>
+  </div>
+</div>
+
+{% endblock %}
+{% block extrascripts %}
+
+<script>
+
+/* Try to solve this without editing anything */
+
+function validate() {
+  var field = $("#pass").val();
+  if (hash(field) == "4drowssap0987654321") {
+    alert("Password correct!");
+    Cookies.set('level4', "true");
+
+    window.location.href = "/level5/";
+  } else {
+    alert("Password incorrect.");
+  }
+}
+
+function hash(str) {
+  let l=str.length, s='';
+
+  while(l > 0) {
+    l--;
+    s+= str[l];
+  }
+
+  s += "0987654321";
+
+  return s;
+}
+
+</script>
+
+{% endblock %}

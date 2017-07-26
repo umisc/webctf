@@ -6,20 +6,12 @@ Easy example CTF server that demonstrates clientside web exploitation. It also d
 Installation
 ------------
 
-This is a typical rails app. Ensure you have the dependencies using `rvm` or similar:
+This is a simple Flask app. Ensure you have the dependencies:
 
--	Ruby 2.4.1
--	Bundler 1.15.3
--	Rails 5.1.2
+-	Python 2.5 or better
+-	Flask
 
-Just ensure your ruby and bundler versions are up to date and run:
-
-```sh
-$ bundle install
-$ rails s
-```
-
-This will start a server on 0.0.0.0:3000.
+Just `python manage.py`. Set export WERKZEUG_DEBUG_PIN=off, though.
 
 Troubleshooting
 ---------------
@@ -39,7 +31,7 @@ The developer is very new to web development, especially with security. They cop
 
 -	What is client-side validation?
 
-The developer is embarrassed at their mistake and wants to prove they can write their own code. They're learning JavaScript and are really enthusiastic about it, enough to write a login feature in JavaScript. The dev has also learned a small amount about hash functions, too...
+The developer is embarrassed at their mistake and wants to prove they can write their own code. They're learning JavaScript and are really enthusiastic about it, enough to write a login feature in JavaScript. The dev has also learned a small amount about hash functions to make their password verification script "better."
 
 -	What is a cookie?
 
@@ -63,13 +55,13 @@ The developer has launched the site! But of course, they don't know what they're
 
 So now the developer is editing the code they are copying But they don't seem to know exactly how HTML works. You know for a fact that the view function for the login handler just returns a valid login, no validation. So what's the password?
 
-**Hint:** When the user visits a *url* path (or route), they call a *view function* related to that route. This view function can do processing with the HTTP object the client sends. You might want to look up "MVC" if you're interested.
+**Hint:** In MVC, when the user visits a *url* path (or route), they call a *view function* related to that route. This view function can do processing with the HTTP object the client sends. Flask is not MVC but the concepts are pretty general: there are views and each view is associated with a URL.
 
-**Hint:** Try logging in even if you know nothing.
+**Hint:** Try logging in even if you know nothing. If you still don't get it, read the source code.
 
--	What is Using Components with Known Vulnerabilities? Also, what is Improper Configuration?
+-	What is Improper Configuration?
 
-The developer is using an outdated version of Flask, justifying themselves that things would break should they upgrade. This developer is also unsure about how Python and Flask works, leaving Debug set to True in production.
+You notice that the developer has not bothered to turn Debug mode off. What's more, it doesn't seem the configuration is in order for their Flask app...
 
 -	What is error handling?
 
