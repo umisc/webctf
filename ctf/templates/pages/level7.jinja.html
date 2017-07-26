@@ -1,0 +1,24 @@
+{% extends 'base/base.jinja.html' %}
+{% block content %}
+
+<div class="col col-xs-2"></div>
+<div class="col col-xs-8">
+  <div class="text-center">
+    <h1>Level 7</h1>
+    <h2>What is a view/controller?</h2>
+  </div>
+
+  <p>
+    So now the developer is editing the code they are copying But they don't seem to know exactly how HTML works. You know for a fact that the view function for the login handler just returns a valid login, no validation. So what's the password?
+  </p>
+
+  <p>
+    Hint: In MVC, when the user visits a *url* path (or route), they call a *view function* related to that route. This view function can do processing with the HTTP object the client sends. Flask is not MVC but the concepts are pretty general: there are views and each view is associated with a URL.
+  </p>
+
+  <p>
+    Hint: Try logging in even if you know nothing. If you still don't get it, read the source code.
+  </p>
+</div>
+
+{% endblock %}

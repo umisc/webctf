@@ -89,6 +89,21 @@ def level7():
     return render_template('pages/level7.jinja.html')
 
 
+@app.route('/level8/', methods=['GET', 'POST'])
+def level8():
+    """Controller for CTF level."""
+    if request.cookies.get("level7") != "true":
+        return "Permission denied. Go back."
+    return render_template('pages/level8.jinja.html')
+
+
+@app.route('/console/', methods=['GET', 'POST'])
+def debug():
+    """Force exception on debug."""
+    assert not app.debug
+    return "Debug mode is off. The password is 'no_debug'"
+
+
 @app.route('/sitemap.xml', methods=['GET'])
 def sitemap():
     """Contact forms."""

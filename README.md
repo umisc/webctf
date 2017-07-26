@@ -11,7 +11,7 @@ This is a simple Flask app. Ensure you have the dependencies:
 -	Python 2.5 or better
 -	Flask
 
-Just `python manage.py`. Set export WERKZEUG_DEBUG_PIN=off, though.
+Just `python manage.py`. Set export WERKZEUG_DEBUG_PIN=off for one of the questions that requires it.
 
 Troubleshooting
 ---------------
@@ -61,7 +61,10 @@ So now the developer is editing the code they are copying But they don't seem to
 
 -	What is Improper Configuration?
 
-You notice that the developer has not bothered to turn Debug mode off. What's more, it doesn't seem the configuration is in order for their Flask app...
+You notice that the developer has not bothered to turn Debug mode off. What's more, it doesn't seem the configuration is in order for their Flask app. Can you access the 'secret.txt' file? What else can you do?
+
+Not yet implemented
+-------------------
 
 -	What is error handling?
 
