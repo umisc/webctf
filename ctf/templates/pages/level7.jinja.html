@@ -19,6 +19,23 @@
   <p>
     Hint: Try logging in even if you know nothing. If you still don't get it, read the source code.
   </p>
+
+  <div class="col col-xs-3"></div>
+  <div class="col col-xs-6">
+      <div class="form-item" style="margin: 1em">
+        <input id="pass" name="pass"
+               required="true" type="password"
+               placeholder="Password?" class="form-control"/>
+      </div>
+
+      <div class="form-item"  style="margin: 1em">
+        <button class="button round outline big form-control text-center"
+                onclick="validate()">
+          Login
+        </button>
+      </div>
+  </div>
+</div>
 </div>
 
 {% endblock %}
