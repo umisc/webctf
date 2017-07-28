@@ -3,6 +3,11 @@ webctf
 
 Easy example CTF server that demonstrates clientside web exploitation. It also demonstrates Information Disclosure in the later levels.
 
+Note
+----
+
+This repository is antiquated. There are much better CTF and exploitable web apps out there than this. Use this if you like, but it's very basic.
+
 Installation
 ------------
 
@@ -62,20 +67,3 @@ So now the developer is editing the code they are copying But they don't seem to
 -	What is Improper Configuration?
 
 You notice that the developer has not bothered to turn Debug mode off. What's more, it doesn't seem the configuration is in order for their Flask app. Can you access the 'secret.txt' file? What else can you do?
-
-Not yet implemented
--------------------
-
--	What is error handling?
-
-The server now does all validation on the server. The developer has learned their lesson. But they seem to have left full error message displays on.
-
--	What are HTTP status codes?
-
-The developer has learned their lesson and the errors returned are now much more general. Logging in might not be as easy as it was before. But you don't need to log in, you just need to find out which one of the following users actually exists on the server: andyh, maxw, alicec, bobl, daven, carols, eveo, frankz.
-
--	What is a time-based attack?
-
-Now the developer has wised up and has almost had enough of you. Their last design has generalised 200-status error messages, and your job again is to find the user on the list that exists.
-
-**Hint:** The password is hashed repeatedly (about 10,000 times) using an algorithm that is designed to make brute force cracking infeasible. Would this take a long time? Could we avoid this processing somehow unless it was completely necessary? *Should* we?
